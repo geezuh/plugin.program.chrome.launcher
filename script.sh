@@ -1,5 +1,2 @@
-#!/bin/bash
-openbox &
-/usr/bin/google-chrome "$@" &
-wait %2
-kill %1
+chromium "--user-data-dir=$HOME/.config/chromium/kodi" --app="$@"
+echo "$@" > $HOME/.webapp.log
